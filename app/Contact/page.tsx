@@ -3,7 +3,8 @@ import React, {useState} from 'react'
 import Input from "@/app/components/input";
 import Textarea from "@/app/components/textarea";
 import {validate} from "@/app/utilities/validate";
-
+import {toast} from "sonner";
+import {redirect} from "next/navigation";
 //Exporting this React component
 export default function Contact() {
 
@@ -16,7 +17,13 @@ export default function Contact() {
         message: '',
     })
 
-    const [validationErrors , setErrors] = useState<{firstName?: string; lastName?: string; email?: string; subject?: string; message?: string;}>({})
+    const [validationErrors , setErrors] = useState<{
+        firstName?: string;
+        lastName?: string;
+        email?: string;
+        subject?: string;
+        message?: string;
+    }>({})
 
     //handling the submit so when submitted something happens
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -25,11 +32,15 @@ export default function Contact() {
         const isError = Object.keys(validationErrors).length
         if(isError && isError > 0) {
             setErrors(validationErrors)
-            return
+            toast.error('An error occured. Please check your inputs.')
+            return false;
         } else {
+            toast.success('Your message has been sent.')
+            console.log(values);
+            return redirect("/redirect?url=contact-success");
 
         }
-        console.log(values);
+
     }
 
     //handling the changes on the form inputs
@@ -97,8 +108,9 @@ export default function Contact() {
                     placeholder="What's on your mind?">
                 </Textarea>
                 <div className="mt-2.5">
-                    <button className="btn btn-accent w-full py-2 mt-2 text-lg text-black bg-accent rounded-md
-                        active:bg-success outline-none disabled:bg-opacity-50" disabled={false} type="submit">Send My Message
+                    <button className="btn btn-accent w-full py-2 mt-2 text-lg text-black bg-accent rounded-md active:bg-success outline-none disabled:bg-opacity-50"
+                            disabled={false}
+                            type="submit">Send My Message
                     </button>
                 </div>
             </form>
