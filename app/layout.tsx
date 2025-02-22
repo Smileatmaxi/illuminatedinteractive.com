@@ -18,7 +18,7 @@ export default function RootLayout({children,}: Readonly<{ children: React.React
     return (
         <html lang="en">
         <body className={`${exo.className} antialiased flex flex-col min-h-screen`}>
-        <nav className="bg-neutral-100/25 text-white shadow-lg sticky top-0 z-50">
+        <nav className="bg-neutral-50/25 text-white shadow-lg sticky top-0 z-50">
             <div className="navbar">
                 <div className="flex-1">
                     <Link className="text-3xl" href="/">ILLUMINATED-INTERACTIVE</Link>
