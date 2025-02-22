@@ -1,11 +1,13 @@
-import type {Metadata} from "next";
-import {Oswald} from "next/font/google";
+import type { Metadata } from "next";
+import { Oswald } from "next/font/google";
 import "./globals.css";
 import React from "react";
 import Link from "next/link";
 import { Toaster } from 'sonner';
 
-const oswald = Oswald();
+const oswald = Oswald({
+    subsets: ["latin"]
+});
 
 export const metadata: Metadata = {
     title: "Illuminated Interactive",
