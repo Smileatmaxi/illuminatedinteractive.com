@@ -1,10 +1,12 @@
 'use client'
+
 import React, {useState} from 'react'
 import Input from "@/app/components/input";
 import Textarea from "@/app/components/textarea";
 import {validate} from "@/app/utilities/validate";
 import {toast} from "sonner";
 import {redirect} from "next/navigation";
+
 //Exporting this React component
 export default function Contact() {
 
@@ -33,14 +35,13 @@ export default function Contact() {
         if(isError && isError > 0) {
             setErrors(validationErrors)
             toast.error('An error occured. Please check your inputs.')
-            return false;
         } else {
             toast.success('Your message has been sent.')
             console.log(values);
-            return redirect("/redirect?url=contact-success");
-
+            setTimeout(() => {
+                return (redirect("/"));
+            }, 500)
         }
-
     }
 
     //handling the changes on the form inputs
@@ -118,4 +119,5 @@ export default function Contact() {
     </div>
     )
 }
+
 
