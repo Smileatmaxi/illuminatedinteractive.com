@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Oswald } from "next/font/google";
+import { Exo} from "next/font/google";
 import "./globals.css";
 import React from "react";
 import Link from "next/link";
 import { Toaster } from 'sonner';
 
-const oswald = Oswald({
+const exo = Exo ({
     subsets: ["latin"]
 });
 
@@ -17,11 +17,11 @@ export const metadata: Metadata = {
 export default function RootLayout({children,}: Readonly<{ children: React.ReactNode; }>) {
     return (
         <html lang="en">
-        <body className={`${oswald.className} font-bold`}>
-        <nav className="box-content p-5">
-            <div className="navbar bg-base-100">
+        <body className={`${exo.className} antialiased flex flex-col min-h-screen`}>
+        <nav className="bg-neutral-900 text-white shadow-lg">
+            <div className="navbar">
                 <div className="flex-1">
-                    <Link className="text-3xl" href="/">Illuminated Interactive</Link>
+                    <Link className="text-3xl" href="/">ILLUMINATED-INTERACTIVE</Link>
                 </div>
                 <div className="flex-none">
                     <ul className="menu menu-horizontal mx-5">
@@ -33,11 +33,15 @@ export default function RootLayout({children,}: Readonly<{ children: React.React
                 </div>
             </div>
         </nav>
-        <main>
+        <main className="grow">
+            <div className="container min-height-100vh d-flex align-items-center pt-100 pb-100">
+                <div className="home-content">
+                </div>
+            </div>
             {children}
             <Toaster position="top-right" richColors/>
         </main>
-            <footer className="footer footer-center bg-base-300 text-base-content rounded p-5 ">
+            <footer className="footer footer-center bg-neutral-900 text-base-content rounded p-5">
                 <nav className="grid grid-flow-col gap-4">
                     <Link href="AboutUs">About Us</Link>
                     <Link href="Contact">Contact</Link>
@@ -81,7 +85,7 @@ export default function RootLayout({children,}: Readonly<{ children: React.React
                     </div>
                 </nav>
                 <aside>
-                    <p>Copyright © {new Date().getFullYear()} - All right reserved by LuminaryLabs</p>
+                    <p>Copyright © {new Date().getFullYear()} - All right reserved by IlluminatedInteractive</p>
                 </aside>
             </footer>
         </body>
