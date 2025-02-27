@@ -35,9 +35,9 @@ export default function RootLayout({children,}: Readonly<{ children: React.React
                     </div>
                 </div>
             </nav>
-            <main className="grow content-center w-screen h-screen">
-                {children}
-                <Toaster position="top-right" richColors/>
+            <main id="main">
+                    {children}
+                    <Toaster position="top-right" richColors/>
             </main>
         </div>
         <footer className="footer footer-center bg-neutral-900 text-base-content rounded p-5">
