@@ -30,7 +30,7 @@ export default function RootLayout({children,}: Readonly<{ children: React.React
                             <li><Link className="link link-hover text-xl" href="">The Game</Link></li>
                             <li><Link className="link link-hover text-xl" href="">News</Link></li>
                             <li><Link className="link link-hover text-xl" href="">Media</Link></li>
-                            <li><Link className="link link-hover text-xl" href="AboutUs">AboutUs</Link></li>
+                            <li><Link className="link link-hover text-xl" href="aboutus">AboutUs</Link></li>
                         </ul>
                     </div>
                 </div>
@@ -42,8 +42,8 @@ export default function RootLayout({children,}: Readonly<{ children: React.React
         </div>
         <footer className="footer footer-center bg-neutral-900 text-base-content rounded p-5">
             <nav className="grid grid-flow-col gap-4">
-                <Link href="AboutUs">About Us</Link>
-                <Link href="Contact">Contact Us</Link>
+                <Link href="aboutus">About Us</Link>
+                <Link href="contact">Contact Us</Link>
                 <Link className="link link-hover" href="">Press kit</Link>
             </nav>
             <nav>
