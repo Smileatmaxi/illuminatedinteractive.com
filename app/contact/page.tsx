@@ -1,8 +1,8 @@
 'use client'
 
 import React, {useState} from 'react'
-import Input from "@/app/components/input";
-import Textarea from "@/app/components/textarea";
+import Input from "@/components/input";
+import Textarea from "@/components/textarea";
 import {validate} from "@/app/utilities/validate";
 import {toast} from "sonner";
 import {redirect} from "next/navigation";
