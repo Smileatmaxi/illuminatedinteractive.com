@@ -1,10 +1,14 @@
 "use client"
 
 import React from "react";
+import Image from "next/image";
+import vercel from "../public/vercel.svg"
 
 export default function Home() {
     return (
         <div>
+            <div>
+                <Image src={vercel} alt="test" layout="fill" objectFit="cover"/>
             <section className="w-full block relative overflow-hidden bg-no-repeat bg-fixed bg-center bg-cover">
                 <div className="min-h-screen flex items-center pt-6.5 pb-6.5">
                     <div className="w-full relative text-center">
@@ -22,6 +26,7 @@ export default function Home() {
                     </div>
                 </div>
             </section>
+            </div>
             <section>
                 <div className="min-h-screen flex items-center pt-6.5 pb-6.5">
                     <div className="w-full relative text-center">
@@ -37,6 +42,18 @@ export default function Home() {
                             diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
                             voluptua. At
                         </p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div className="min-h-screen flex items-center pt-6.5 pb-6.5">
+                    <div className="w-full relative text-center">
+                        <div></div>
+                        <div className="mt-5">
+                        </div>
+                        <h1 className="opacity-85 text-7xl text-center pb-20 font-bold">Potential Screenshots</h1>
+                        <div className="relative">
+                        </div>
                     </div>
                 </div>
             </section>
