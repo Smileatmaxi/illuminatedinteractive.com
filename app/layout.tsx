@@ -4,6 +4,7 @@ import "./globals.css";
 import React from "react";
 import Link from "next/link";
 import {Toaster} from 'sonner';
+import Navbar from "@/components/navbar";
 
 const exo = Exo({
     subsets: ["latin"]
@@ -17,27 +18,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({children,}: Readonly<{ children: React.ReactNode; }>) {
     return (
-        <html lang="en" className="scroll-smooth">
-        <body className={`${exo.className} antialiased flex flex-col min-h-screen`}>
-        <div id="top">
-            <nav className="sticky navbar top-0 z-50 backdrop-filter backdrop-blur-[5px] shadow-lg">
-                <div className="mr-5 ml-5 w-full">
-                    <div className="float-left mr-5">
-                        <Link className="text-3xl float-left" href="/">ILLUMINATED-INTERACTIVE</Link>
-                    </div>
-                    <div className="inline-block position-relative float-right w-full top-0 left-0 text-align-left">
-                        <ul className="menu menu-horizontal float-right m-auto">
-                            <li><Link className="link link-hover text-xl" href="">The Game</Link></li>
-                            <li><Link className="link link-hover text-xl" href="">News</Link></li>
-                            <li><Link className="link link-hover text-xl" href="">Media</Link></li>
-                            <li><Link className="link link-hover text-xl" href="aboutus">AboutUs</Link></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            <main id="main">
-                    {children}
-                    <Toaster position="top-right" richColors/>
+        <html lang="en">
+        <body className={`${exo.className} antialiased flex flex-col min-h-screen `}>
+        <div className="">
+            <Navbar></Navbar>
+            <main>
+                {children}
+                <Toaster position="top-right" richColors/>
             </main>
         </div>
         <footer className="footer footer-center bg-neutral-900 text-base-content rounded p-5">
