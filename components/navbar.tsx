@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Navbar = () => {
     return (
-        <nav className="fixed navbar top-0 z-50 flex backdrop-filter backdrop-blur-[5px] shadow-lg">
+        <nav className="fixed navbar top-0 h-20 z-50 flex backdrop-filter backdrop-blur-[5px] shadow-lg">
             <div className="mr-5 ml-5 w-full relative">
                 <div className="float-left mr-5">
                     <Link className="text-3xl float-left" href="/">ILLUMINATED-INTERACTIVE</Link>
