@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 export default function RootLayout({children,}: Readonly<{ children: React.ReactNode; }>) {
     return (
         <html lang="en">
-        <body className={`${exo.className} antialiased flex flex-col min-h-screen `}>
+        <body className={`${exo.className} antialiased flex flex-col min-h-screen`}>
         <div className="">
             <Navbar></Navbar>
             <main>
