@@ -13,7 +13,7 @@ const Navbar = () => {
                         <li><Link className="link link-hover text-xl" href="">The Game</Link></li>
                         <li><Link className="link link-hover text-xl" href="">News</Link></li>
                         <li><Link className="link link-hover text-xl" href="">Media</Link></li>
-                        <li><Link className="link link-hover text-xl" href="">AboutUs</Link></li>
+                        <li><Link className="link link-hover text-xl" href="aboutus">AboutUs</Link></li>
                     </ul>
                 </div>
             </div>
