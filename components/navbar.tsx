@@ -1,23 +1,118 @@
-import React from 'react'
-import Link from "next/link";
+"use client"; // Needed if you're using Next.js App Router and client-side React features
+
+import React, {useState} from 'react';
+import Link from 'next/link';
 
 const Navbar = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
     return (
-        <nav className="fixed navbar top-0 h-20 z-50 flex backdrop-filter backdrop-blur-[5px] shadow-lg">
-            <div className="mr-5 ml-5 w-full relative">
-                <div className="float-left mr-5">
-                    <Link className="text-3xl float-left" href="/">ILLUMINATED-INTERACTIVE</Link>
+        <nav className="fixed top-0 left-0 w-full z-50 flex flex-col bg-black/50 backdrop-blur-md shadow-lg">
+            {/* Top Bar */}
+            <div className="flex items-center justify-between h-20 px-5">
+                {/* Logo / Brand */}
+                <div>
+                    <Link href="/" className="text-3xl text-white">
+                        ILLUMINATED-INTERACTIVE
+                    </Link>
                 </div>
-                <div className="inline-block position-relative float-right w-full top-0 left-0 text-align-left">
-                    <ul className="menu menu-horizontal float-right m-auto">
-                        <li><Link className="link link-hover text-xl" href="">The Game</Link></li>
-                        <li><Link className="link link-hover text-xl" href="">News</Link></li>
-                        <li><Link className="link link-hover text-xl" href="">Media</Link></li>
-                        <li><Link className="link link-hover text-xl" href="aboutus">AboutUs</Link></li>
+
+                {/* Desktop Menu (hidden on small screens) */}
+                <div className="hidden md:flex space-x-8">
+                    <Link
+                        href=""
+                        className="text-white transition-colors duration-300 hover:text-gray-300 text-xl"
+                    >
+                        Noctlan
+                    </Link>
+                    <Link
+                        href=""
+                        className="text-white transition-colors duration-300 hover:text-gray-300 text-xl"
+                    >
+                        News & Updates
+                    </Link>
+                    <Link
+                        href=""
+                        className="text-white transition-colors duration-300 hover:text-gray-300 text-xl"
+                    >
+                        Media
+                    </Link>
+                    <Link
+                        href="aboutus"
+                        className="text-white transition-colors duration-300 hover:text-gray-300 text-xl"
+                    >
+                        About Us
+                    </Link>
+                </div>
+
+                {/* Hamburger Icon (shown on small screens) */}
+                <button
+                    onClick={() => setIsOpen(!isOpen)}
+                    type="button"
+                    className="md:hidden focus:outline-none"
+                >
+                    <svg
+                        className="w-6 h-6 text-white"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M4 6h16M4 12h16M4 18h16"
+                        />
+                    </svg>
+                </button>
+            </div>
+
+            {/* Mobile Menu (conditional render) */}
+            {isOpen && (
+                <div className="md:hidden bg-black/80 text-white">
+                    <ul className="flex flex-col items-center py-4 space-y-2">
+                        <li>
+                            <Link
+                                href=""
+                                className="transition-colors duration-300 hover:text-gray-300 text-xl"
+                                onClick={() => setIsOpen(false)}
+                            >
+                                Noctlan
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                href=""
+                                className="transition-colors duration-300 hover:text-gray-300 text-xl"
+                                onClick={() => setIsOpen(false)}
+                            >
+                                News & Updates
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                href=""
+                                className="transition-colors duration-300 hover:text-gray-300 text-xl"
+                                onClick={() => setIsOpen(false)}
+                            >
+                                Media
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                href="aboutus"
+                                className="transition-colors duration-300 hover:text-gray-300 text-xl"
+                                onClick={() => setIsOpen(false)}
+                            >
+                                About Us
+                            </Link>
+                        </li>
                     </ul>
                 </div>
-            </div>
+            )}
         </nav>
-    )
-}
-export default Navbar
+    );
+};
+
+export default Navbar;
