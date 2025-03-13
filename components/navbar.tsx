@@ -1,4 +1,4 @@
-"use client"; // Needed if you're using Next.js App Router and client-side React features
+"use client";
 
 import React, {useState} from 'react';
 import Link from 'next/link';
