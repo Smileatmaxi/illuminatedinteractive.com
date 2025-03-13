@@ -44,7 +44,7 @@ export default function Home() {
                             who entered before you still echo through the narrow corridors. This is no ordinary ruin—it
                             is a cursed tomb, a place where darkness itself takes form.
 
-                            Solve intricate puzzles, navigate suffocating passageways, and survive the horrors lurking
+                            Solve puzzles, navigate suffocating passageways, and survive the horrors lurking
                             within. But beware—something is watching you. And once you enter, there may be no escape.
 
                             Are you ready to uncover the truth behind the legend? Or will you become just another lost
