@@ -38,7 +38,7 @@ const Navbar = () => {
                         Media
                     </Link>
                     <Link
-                        href="aboutus"
+                        href="about-us"
                         className="text-white transition-colors duration-300 hover:text-gray-300 text-xl"
                     >
                         About Us
