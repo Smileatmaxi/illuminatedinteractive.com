@@ -1,24 +1,26 @@
-"use client";
-
 import {AnimatedTestimonials} from "@/components/ui/animated-testimonials";
 
 export function AnimatedTestimonialsTeam() {
     const testimonials = [
         {
             quote:
-                "Hello, I'm Maximilian. I'm a 27-year-old programming enthusiast with a passion for creating innovative projects. I built this website, and together with my best friend Kevin, we are developing the game Noctlan",
+                "I am Maximilian Leupold, a 27-year-old programming enthusiast with a passion for innovation. I developed this website, and together with my best friend Kevin, we are currently developing the game Noctlan.",
             name: "Maximilian Leupold",
-            designation: "Product Manager at TechFlow",
+            designation: "Founder & Lead Developer at IlluminatedInteractive",
             src: "/team/Maximilian.webp",
             alt: "Maximilian Leupold",
+            insta: "https://www.Instagram.com/Smileatmaxi",
+            linkedin:"https://www.linkedin.com/in/maximilian-leupold-118873313"
         },
         {
             quote:
                 "Implementation was seamless and the results exceeded our expectations. The platform's flexibility is remarkable.",
             name: "Kevin Kuhn",
-            designation: "CTO at InnovateSphere",
+            designation: "Founder of IlluminatedInteractive & Lead Designer 3D Art",
             src: "/team/Kevin.webp",
             alt: "Kevin Kuhn",
+            insta: "https://www.instagram.com/madebykev1n/",
+            linkedin: "https://www.linkedin.com/in/kevin-kuhn-42a5602b8/",
         },
     ];
     return <AnimatedTestimonials testimonials={testimonials}/>;
