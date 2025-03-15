@@ -4,7 +4,7 @@ export function AnimatedTestimonialsTeam() {
     const testimonials = [
         {
             quote:
-                "I am Maximilian Leupold, a 27-year-old programming enthusiast with a passion for innovation. I developed this website, and together with my best friend Kevin, we are currently developing the game Noctlan.",
+                "I am a 26-year-old programming enthusiast with a passion for innovation. I developed this website, and together with my best friend, we are currently working the game Noctlan.",
             name: "Maximilian Leupold",
             designation: "Founder & Lead Developer at IlluminatedInteractive",
             src: "/team/Maximilian.webp",
@@ -14,7 +14,7 @@ export function AnimatedTestimonialsTeam() {
         },
         {
             quote:
-                "Implementation was seamless and the results exceeded our expectations. The platform's flexibility is remarkable.",
+                "I am a 27-year-old self-taught artist who creates a diverse range of meticulously crafted game assets—from small objects to large structures—developed entirely from scratch for our game Noctlan",
             name: "Kevin Kuhn",
             designation: "Founder & Lead 3D Art Designer at IlluminatedInteractive",
             src: "/team/Kevin.webp",
