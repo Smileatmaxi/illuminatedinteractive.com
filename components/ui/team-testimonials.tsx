@@ -10,7 +10,8 @@ export function AnimatedTestimonialsTeam() {
             src: "/team/Maximilian.webp",
             alt: "Maximilian Leupold",
             instagram: "https://www.Instagram.com/Smileatmaxi",
-            linkedin:"https://www.linkedin.com/in/maximilian-leupold-118873313"
+            linkedin:"https://www.linkedin.com/in/maximilian-leupold-118873313",
+            github: "https://github.com/Smileatmaxi",
         },
         {
             quote:
@@ -21,6 +22,7 @@ export function AnimatedTestimonialsTeam() {
             alt: "Kevin Kuhn",
             instagram: "https://www.instagram.com/madebykev1n/",
             linkedin: "https://www.linkedin.com/in/kevin-kuhn-42a5602b8/",
+            github:"placeholder",
         },
     ];
     return <AnimatedTestimonials testimonials={testimonials}/>;
