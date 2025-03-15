@@ -11,8 +11,8 @@ const exo = Exo({
 });
 
 export const metadata: Metadata = {
-    title: "Illuminated Interactive",
-    description: "This is the Official of Illuminated Interactive",
+    title: "IlluminatedInteractive",
+    description: "This is the Official IlluminatedInteractive Homepage",
 };
 
 
