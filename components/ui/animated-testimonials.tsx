@@ -10,7 +10,7 @@ type Testimonial = {
     name: string;
     designation: string;
     src: string;
-    insta: string;
+    instagram: string;
     linkedin: string;
 };
 export const AnimatedTestimonials = ({
@@ -99,7 +99,7 @@ export const AnimatedTestimonials = ({
                                             transition={{ duration: 0.4 }}
                                         >
                                             <a
-                                                href={testimonial.insta}
+                                                href={testimonial.instagram}
                                                 target="_blank"
                                                 draggable={false}
                                             >

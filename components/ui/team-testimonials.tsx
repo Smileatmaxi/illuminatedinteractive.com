@@ -9,7 +9,7 @@ export function AnimatedTestimonialsTeam() {
             designation: "Founder & Lead Developer at IlluminatedInteractive",
             src: "/team/Maximilian.webp",
             alt: "Maximilian Leupold",
-            insta: "https://www.Instagram.com/Smileatmaxi",
+            instagram: "https://www.Instagram.com/Smileatmaxi",
             linkedin:"https://www.linkedin.com/in/maximilian-leupold-118873313"
         },
         {
@@ -19,7 +19,7 @@ export function AnimatedTestimonialsTeam() {
             designation: "Founder & Lead 3D Art Designer at IlluminatedInteractive",
             src: "/team/Kevin.webp",
             alt: "Kevin Kuhn",
-            insta: "https://www.instagram.com/madebykev1n/",
+            instagram: "https://www.instagram.com/madebykev1n/",
             linkedin: "https://www.linkedin.com/in/kevin-kuhn-42a5602b8/",
         },
     ];
