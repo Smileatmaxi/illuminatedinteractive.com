@@ -1,22 +1,49 @@
-import type { Config } from "tailwindcss";
+import type {Config} from "tailwindcss";
+const defaultTheme = require("tailwindcss/defaultTheme");
+const colors = require("tailwindcss/colors");
+const {
+    default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
 
-export default {
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
-  theme: {
-    extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+    content: [
+        "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+        "./components/**/*.{js,ts,jsx,tsx,mdx}",
+        "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    ],
+    theme: {
+        prefix: "",
+        extend: {
+            backgroundImage: {
+                sectionOne: `url('../public/RootedTheGameBackground.webp')`,
+                sectionTwo: `url('../public/RootedRain.webp')`,
+                sectionThree: `url('../public/RootedMetro.webp')`,
+            },
+            teamImage: {
+              Maximilian: `url('../public/team/ThisisNewYork.webp')`,
+            },
+            colors: {
+                background: "var(--background)",
+                foreground: "var(--foreground)",
+            },
+        },
     },
-  },
-  // eslint-disable-next-line @typescript-eslint/no-require-imports
-  plugins: [require('daisyui'),],
-  daisyui: {
-    themes: ["light", "dark"],
-  },
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    plugins: [require('daisyui'), addVariablesForColors],
+    daisyui: {
+        themes: ["light", "dark"],
+    },
 } satisfies Config;
+
+// This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
+function addVariablesForColors({ addBase, theme }: any) {
+    let allColors = flattenColorPalette(theme("colors"));
+    let newVars = Object.fromEntries(
+        Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+    );
+
+    addBase({
+        ":root": newVars,
+    });
+}
