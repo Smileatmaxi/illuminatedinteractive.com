@@ -16,7 +16,7 @@ export function AnimatedTestimonialsTeam() {
             quote:
                 "Implementation was seamless and the results exceeded our expectations. The platform's flexibility is remarkable.",
             name: "Kevin Kuhn",
-            designation: "Founder of IlluminatedInteractive & Lead Designer 3D Art",
+            designation: "Founder & Lead 3D Art Designer at IlluminatedInteractive",
             src: "/team/Kevin.webp",
             alt: "Kevin Kuhn",
             insta: "https://www.instagram.com/madebykev1n/",
