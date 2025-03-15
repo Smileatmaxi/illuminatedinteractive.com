@@ -20,9 +20,6 @@ module.exports = {
                 sectionTwo: `url('../public/RootedRain.webp')`,
                 sectionThree: `url('../public/RootedMetro.webp')`,
             },
-            teamImage: {
-              Maximilian: `url('../public/team/ThisisNewYork.webp')`,
-            },
             colors: {
                 background: "var(--background)",
                 foreground: "var(--foreground)",
