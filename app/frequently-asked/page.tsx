@@ -105,7 +105,7 @@ const FrequentlyAsked = () => {
                                         Noctlan is an immersive horror game that combines rich storytelling with dynamic
                                         gameplay. Set in a jungle in the 1970s as an adventurer exploring an old
                                         forgotten Aztec temple, players will embark on
-                                        an epic journey filled with challenges, jump scares, and a creepy vibe.
+                                        an creepy journey filled with challenges and jump scares.
                                     </div>
                                 </details>
                             </div>
