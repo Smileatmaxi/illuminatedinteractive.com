@@ -3,14 +3,13 @@ import {AnimatedTestimonialsTeam} from "@/components/ui/team-testimonials";
 
 const AboutUs = () => {
     return (
-        <div className="h-screen mx-auto content-center">
+        <div className="h-screen mx-auto content-center items-start">
             <div className="text-center mb-36">
                 <h1 className="text-7xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Who are
                     we?</h1>
                 <span className="">
-                    <p>
-                        We Are Illuminated Interactive a Small Game studio from Germany we enjoy creating Games most of them will be in the Genre of Horror
-                        we really try our best to get as much Detail into our
+                    <p className="text-center text-2xl ml-10 mr-10 pl-6 pr-6">
+                        We Are Illuminated Interactive a Small Game studio based in Germany. We enjoy creating Games from Scratch with love
                     </p>
                 </span>
             </div>
