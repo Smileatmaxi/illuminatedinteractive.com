@@ -1,4 +1,5 @@
 import React from "react";
+import {TextGenerateEffectDemo} from "@/components/ui/main-text-generate-effect";
 
 export default function Home() {
     return (
@@ -8,18 +9,19 @@ export default function Home() {
                     <div className="w-full relative text-center">
                         <div className="mt-5">
                         </div>
-                        <span
-                            className="text-7xl text-center pb-20 font-bold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">Survive the Ancient AztecHorrors
+                        <span>
+                            <TextGenerateEffectDemo>
+                            </TextGenerateEffectDemo>
                         </span>
-                        <p className="text-center text-2xl pb-20 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">Ancient
+                        <p className="text-center text-3xl pb-20 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">Ancient
                             Survival Horror Adventure</p>
                         <div className="flex justify-center gap-10">
-                            <p className="text-center pb-20 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">Coming
+                            <p className="text-center text-2xl pb-20 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">Coming
                                 soon to Steam</p>
-                            <p className="text-center pb-20 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">Coming
+                            <p className="text-center text-2xl pb-20 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">Coming
                                 soon to Epic Games</p>
                         </div>
-                        <p className="text-center drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">Powered by
+                        <p className="text-center text-2xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">Powered by
                             Unreal Engine</p>
                     </div>
                 </div>
