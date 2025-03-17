@@ -9,7 +9,7 @@ const FrequentlyAsked = () => {
                     Frequently Asked Questions
                 </h2>
                 <p className="mx-auto max-w-lg text-center text-base text-neutral-600 dark:text-neutral-50">
-                    We are here to help you with any questions you may have. If you don't find what you need, feel free
+                    We are here to help you with any questions you may have. If you don&apos;t find what you need, feel free
                     to contact us via Mail at
                 </p>
                 <a href="mailto:contact@IlluminatedInteractive.com"
@@ -41,7 +41,7 @@ const FrequentlyAsked = () => {
                                     <div
                                         className="text-neutral-500 dark:text-neutral-400 group-open:animate-fadeIn mt-2">
                                         Our game is not scheduled yet. We’re still building our basics. As a team of two
-                                        people, it takes a lot of time to create something good, and we don't want to
+                                        people, it takes a lot of time to create something good, and we don&apos;t want to
                                         rush things!
                                     </div>
                                 </details>
@@ -285,7 +285,7 @@ const FrequentlyAsked = () => {
                                     <div
                                         className="text-neutral-500 dark:text-neutral-400 group-open:animate-fadeIn mt-2">
                                         Our dedicated support team is here to help. For technical assistance, please
-                                        visit the <b>Contact Us</b> section on our website, where you'll find
+                                        visit the <b>Contact Us</b> section on our website, where you&apos;ll find
                                         troubleshooting guides and contact details for customer service.
                                     </div>
                                 </details>
@@ -299,7 +299,7 @@ const FrequentlyAsked = () => {
                                 <details className="group">
                                     <summary className="flex cursor-pointer list-none items-center justify-between">
                                         <h3 className="text-lg font-medium text-neutral-700 dark:text-neutral-200">
-                                            How much will Noctlan cost after it's release?
+                                            How much will Noctlan cost after it&apos;s release?
                                         </h3>
                                         <span className="transition group-open:rotate-180">
                                             <svg xmlns="http://www.w3.org/2000/svg"
