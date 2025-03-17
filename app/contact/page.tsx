@@ -51,8 +51,8 @@ export default function Contact() {
 
     //basic HTML and Tailwind
     return (
-    <div className="h-screen mx-auto content-center">
-        <div className="mx-auto max-w-2xl text-center">
+        <div className="w-full justify-center p-2 sm:p-10 items-center">
+            <div className="mx-auto grid w-full max-w-7xl px-4 pt-24 md:px-8 md:py-40 text-center">
             <h1 className="text-4xl font-semibold tracking-tight text-balance text-gray-400 sm:text-5xl">CONTACT US</h1>
             <p className="mt-2 text-lg/8 text-gray-500">If you have any questions regarding our company or our games feel free to write us.</p>
         </div>
