@@ -23,7 +23,7 @@ const Input = ({
                    ...props
 }: InputProps) => {
     return (
-        <div className="w-full mb-3">
+        <div className="w-full mb-4">
             <label className="block text-lg font-semibold text-gray-4" htmlFor={id}>{label}</label>
             <div className="mt-2.5">
                 <input
