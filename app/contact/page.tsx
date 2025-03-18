@@ -34,7 +34,7 @@ export default function Contact() {
         const isError = Object.keys(validationErrors).length
         if(isError && isError > 0) {
             setErrors(validationErrors)
-            toast.error('An error occured. Please check your inputs.')
+            toast.error('An error occurred. Please check your inputs.')
         } else {
             toast.success('Your message has been sent.')
             console.log(values);
@@ -52,9 +52,9 @@ export default function Contact() {
     //basic HTML and Tailwind
     return (
         <div className="w-full justify-center p-2 sm:p-10 items-center">
-            <div className="mx-auto grid w-full max-w-7xl px-4 pt-24 md:px-8 md:py-40 text-center">
+            <div className="mx-auto grid w-full max-w-7xl gap-4 px-4 py-20 md:px-8 md:py-40 text-center">
             <h1 className="text-4xl font-semibold tracking-tight text-balance text-gray-400 sm:text-5xl">CONTACT US</h1>
-            <p className="mt-2 text-lg/8 text-gray-500">If you have any questions regarding our company or our games feel free to write us.</p>
+            <p className="mt-2 text-lg/8 text-gray-500">If you have any questions regarding us or our games feel free to write us.</p>
         </div>
         <div className="px-3">
             <form action="#" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20 flex flex-col items-center" onSubmit={handleSubmit}>
