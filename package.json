@@ -9,12 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-email/components": "^0.0.34",
     "@tabler/icons-react": "^3.31.0",
     "clsx": "^2.1.1",
     "motion": "^12.5.0",
     "next": "^15.2.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "resend": "^4.1.2",
     "sonner": "^2.0.1",
     "tailwind-merge": "^3.0.2"
   },
