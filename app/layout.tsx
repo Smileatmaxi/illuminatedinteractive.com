@@ -23,8 +23,8 @@ export default function RootLayout({children,}: Readonly<{ children: React.React
         <div className="">
             <Navbar></Navbar>
             <main>
+                <Toaster position="top-right" duration={3000} richColors/>
                 {children}
-                <Toaster position="top-right" richColors/>
             </main>
         </div>
         <Footer></Footer>
