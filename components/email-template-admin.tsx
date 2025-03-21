@@ -32,7 +32,7 @@ export const EmailTemplateAdmin: React.FC<Readonly<EmailTemplateProps>> = ({
                         <Text style={mainText}>Last Name: {lastName}</Text>
                         <Text style={mainText}>Email: {email}</Text>
                         <Text style={mainText}>Subject: {subject}</Text>
-                        <Text style={mainText}>Message:{message}</Text>
+                        <Text style={mainText}>Message: {message}</Text>
                     </Section>
                     <Hr/>
                 </Section>
