@@ -33,10 +33,11 @@ export async function POST(request: NextRequest) {
 
         //receiving AdminData email gets send to Admin Inbox
         const adminEmailData = await resend.emails.send({
-            from: email,
+            from: 'contact@illuminatedinteractive.com', // your verified sender email
             to: 'contact@illuminatedinteractive.com',
             subject: 'New Inquiry received!',
             react: adminTemplate,
+            replyTo: email, // so that replies go to the user
         });
 
         /** TODO Fix response error */
