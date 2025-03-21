@@ -1,22 +1,22 @@
 'use client'
 
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import Input from "@/components/input";
 import Textarea from "@/components/textarea";
-import {validate} from "@/app/utilities/validate";
-import {toast} from "sonner";
-import {redirect} from "next/navigation";
+import { validate } from "@/app/utilities/validate";
+import { toast } from "sonner";
+import { redirect } from "next/navigation";
 
 //Exporting this React component
 export default function Contact() {
 
     //setting defaults
-    const [values, setValues] = useState({
-        firstName: '',
-        lastName: '',
-        subject: '',
-        email: '',
-        message: '',
+    const [data, setData] = useState({
+        firstName: "",
+        lastName: "",
+        email: "",
+        subject: "",
+        message: "",
     })
 
     const [validationErrors , setErrors] = useState<{
@@ -27,28 +27,35 @@ export default function Contact() {
         message?: string;
     }>({})
 
-    //handling the submit so when submitted something happens
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        const validationErrors = validate(values)
+        const validationErrors = validate(data)
         const isError = Object.keys(validationErrors).length
+        const response = await fetch("/api/send", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data)
+        })
+
         if(isError && isError > 0) {
             setErrors(validationErrors)
             toast.error('An error occurred. Please check your inputs.')
+            return response.status === 400;
         } else {
             toast.success('Your message has been sent.')
-            console.log(values);
+            console.log(data);
             setTimeout(() => {
-                return (redirect("/"));
-            }, 500)
+                return ( redirect("/"));
+            }, 300)
         }
     }
 
     //handling changes on the form inputs
     const onChange = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => {
-        setValues((prev) => ({...prev, [e.target.name]: e.target.value }))
+        setData((prev) => ({...prev, [e.target.name]: e.target.value }))
     }
-
     //basic HTML and Tailwind
     return (
         <div className="w-full justify-center p-2 sm:p-10 items-center">
@@ -57,11 +64,11 @@ export default function Contact() {
             <p className="mt-2 text-lg/8 text-gray-500">If you have any questions regarding us or our games feel free to write us.</p>
         </div>
         <div className="px-3">
-            <form action="#" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20 flex flex-col items-center" onSubmit={handleSubmit}>
+            <form action="#" method="POST" className="mx-auto max-w-xl flex flex-col items-center" onSubmit={sendEmail}>
                 <Input
                     error={!!validationErrors.firstName}
                     errorMessage={validationErrors.firstName}
-                    value={values.firstName}
+                    value={data.firstName}
                     onChange={onChange}
                     id="fistName"
                     label="First Name*"
@@ -71,7 +78,7 @@ export default function Contact() {
                 <Input
                     error={!!validationErrors.lastName}
                     errorMessage={validationErrors.lastName}
-                    value={values.lastName}
+                    value={data.lastName}
                     onChange={onChange}
                     id="lastName"
                     label="Last Name*"
@@ -81,7 +88,7 @@ export default function Contact() {
                 <Input
                     error={!!validationErrors.email}
                     errorMessage={validationErrors.email}
-                    value={values.email}
+                    value={data.email}
                     onChange={onChange}
                     id="email"
                     label="E-Mail*"
@@ -91,7 +98,7 @@ export default function Contact() {
                 <Input
                     error={!!validationErrors.subject}
                     errorMessage={validationErrors.subject}
-                    value={values.subject}
+                    value={data.subject}
                     onChange={onChange}
                     id="subject"
                     label="Subject*"
@@ -101,7 +108,7 @@ export default function Contact() {
                 <Textarea
                     error={!!validationErrors.message}
                     errorMessage={validationErrors.message}
-                    value={values.message}
+                    value={data.message}
                     onChange={onChange}
                     id="message"
                     name="message"
