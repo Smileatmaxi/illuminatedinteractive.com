@@ -17,7 +17,6 @@ export async function POST(request: NextRequest) {
             return NextResponse.json({message: "Please check your Inputs!"}, {status: 400});
         }
 
-        /** TODO Create a Simple TicketNumber System */
         const ticketNumber = Date.now().toString(36).toUpperCase();
 
         //defining user and admin Template
