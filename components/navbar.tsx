@@ -29,7 +29,7 @@ const Navbar = () => {
                         href=""
                         className="text-white transition-colors duration-300 hover:text-gray-300 text-xl"
                     >
-                        News & Updates
+                        News
                     </Link>
                     <Link
                         href=""
@@ -70,7 +70,7 @@ const Navbar = () => {
 
             {/* Mobile Menu (conditional render) */}
             {isOpen && (
-                <div className="md:hidden bg-black/80 text-white">
+                <div className="md:hidden backdrop-blur-md shadow-lg text-white">
                     <ul className="flex flex-col items-center py-4 space-y-2">
                         <li>
                             <Link
