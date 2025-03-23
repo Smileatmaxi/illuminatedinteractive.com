@@ -19,9 +19,7 @@ export const metadata: Metadata = {
 export default function RootLayout({children,}: Readonly<{ children: React.ReactNode; }>) {
     return (
         <html lang="en">
-        <head>
-            <script id="usercentrics-cmp" src="https://web.cmp.usercentrics.eu/ui/loader.js" data-draft="true" data-settings-id="XUJm6tLW5us2K1" async></script>
-        </head>
+        <Script id="usercentrics-cmp" src="https://web.cmp.usercentrics.eu/ui/loader.js" data-draft="true" data-settings-id="XUJm6tLW5us2K1" async></Script>
         <body className={`${exo.className} antialiased flex flex-col min-h-screen`}>
         <div className="">
             <Navbar></Navbar>
