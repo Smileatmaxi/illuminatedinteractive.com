@@ -24,7 +24,6 @@ const NotFound = () => {
                         <p className="font-bold">GO BACK HOME</p>
                     </button>
                 </Link>
-
             </div>
         </section>
     )
