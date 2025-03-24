@@ -8,7 +8,7 @@ const NotFound = () => {
             <div className="min-h-screen flex flex-col items-center justify-center text-center text-white">
                 <Spotlight/>
                 <h1 className="font-bold text-9xl pb-10">404</h1>
-                <h2 className="font-bold text-3xl pb-10">seems like you&apos;ve found a Place of Silence</h2>
+                <h2 className="font-bold text-3xl pb-10">It seems like you&apos;ve found a Place of Silence</h2>
                 <Link href="/">
                     <button
                         className="rounded-lg bg-transparent flex items-center justify-center px-6 py-3 text-lg text-white gap-2">
