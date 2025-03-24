@@ -1,20 +1,14 @@
-import {
-    Body,
-    Container,
-    Head,
-    Heading,
-    Hr,
-    Html,
-    Preview,
-    Section,
-    Text,
-} from '@react-email/components';
+import {Body, Container, Head, Heading, Hr, Html, Img, Preview, Section, Text,} from '@react-email/components';
 import * as React from 'react';
 
 interface EmailTemplateProps {
     firstName: string;
     ticketNumber: string;
 }
+
+const baseUrl = process.env.VERCEL_URL
+    ? `https://${process.env.VERCEL_URL}`
+    : 'http://localhost:3000';
 
 export const EmailTemplateUser: React.FC<Readonly<EmailTemplateProps>> = ({firstName, ticketNumber}) => (
     <Html>
@@ -24,6 +18,11 @@ export const EmailTemplateUser: React.FC<Readonly<EmailTemplateProps>> = ({first
             <Container style={container}>
                 <Section style={coverSection}>
                     <Section style={imageSection}>
+                        <Img src={`${baseUrl}/ui/IlluminatedInteractive-email-header.png`}
+                             alt="IlluminatedInteractive's Logo"
+                             width="600"
+                             height="200"
+                        />
                     </Section>
                     <Section style={upperSection}>
                         <Heading style={h1}>Thanks for Reaching Out!</Heading>
