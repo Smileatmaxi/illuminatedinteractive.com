@@ -33,8 +33,8 @@ export default function Home() {
                         <div></div>
                         <div className="mt-5">
                         </div>
-                        <h1 className="text-7xl text-center pb-20 font-bold pl-4 pr-4 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">Escape
-                            the Maze of Horrors</h1>
+                        <h2 className="text-7xl text-center pb-20 font-bold pl-4 pr-4 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">Escape
+                            the Maze of Horrors</h2>
                         <p className="text-center text-2xl pb-20 ml-10 mr-10 pl-6 pr-6 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
                             The year is 1970. Deep in the heart of the jungle, an ancient temple hides long
                             forgotten—secrets that should have remained buried.
@@ -63,10 +63,10 @@ export default function Home() {
                         <div></div>
                         <div className="mt-5">
                         </div>
-                        <h1 className="text-7xl text-center pb-20 font-bold
+                        <h2 className="text-7xl text-center pb-20 font-bold
                            drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">Potential
                             Screenshots
-                        </h1>
+                        </h2>
                         <div className="relative">
                         </div>
                     </div>
