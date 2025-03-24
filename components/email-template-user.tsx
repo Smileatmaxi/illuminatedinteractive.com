@@ -8,7 +8,7 @@ interface EmailTemplateProps {
 
 const baseUrl = process.env.VERCEL_URL
     ? `https://${process.env.VERCEL_URL}`
-    : 'http://localhost:3000';
+    : 'https://illuminatedinteractive.com';
 
 export const EmailTemplateUser: React.FC<Readonly<EmailTemplateProps>> = ({firstName, ticketNumber}) => (
     <Html>
