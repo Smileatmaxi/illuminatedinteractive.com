@@ -4,7 +4,7 @@ import {TextGenerateEffectDemo} from "@/components/ui/main-text-generate-effect"
 export default function Home() {
     return (
         <div>
-            <section className="bg-sectionOne relative block overflow-hidden bg-no-repeat bg-cover bg-center bg-fixed">
+            <section className="bg-section-one relative block overflow-hidden bg-no-repeat bg-cover bg-center bg-fixed">
                 <div className="min-h-screen flex items-center pt-6.5 pb-6.5">
                     <div className="w-full relative text-center">
                         <div className="mt-5">
@@ -27,7 +27,7 @@ export default function Home() {
                 </div>
             </section>
             <hr className="border-gray-800"></hr>
-            <section className="bg-sectionTwo relative block overflow-hidden bg-no-repeat bg-cover bg-center bg-fixed">
+            <section className="bg-section-two relative block overflow-hidden bg-no-repeat bg-cover bg-center bg-fixed">
                 <div className="min-h-screen flex items-center pt-6.5 pb-6.5">
                     <div className="w-full relative text-center">
                         <div></div>
@@ -57,7 +57,7 @@ export default function Home() {
             </section>
             <hr className="border-gray-800"></hr>
             <section
-                className="bg-sectionThree relative block overflow-hidden bg-no-repeat bg-cover bg-center bg-fixed">
+                className="bg-section-three relative block overflow-hidden bg-no-repeat bg-cover bg-center bg-fixed">
                 <div className="min-h-screen flex items-center pt-6.5 pb-6.5">
                     <div className="w-full relative text-center">
                         <div></div>

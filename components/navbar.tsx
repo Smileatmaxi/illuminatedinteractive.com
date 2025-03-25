@@ -52,7 +52,7 @@ const Navbar = () => {
                 <button
                     onClick={() => setIsOpen(!isOpen)}
                     type="button"
-                    className="md:hidden focus:outline-none"
+                    className="md:hidden focus:outline-hidden"
                 >
                     <svg
                         className="w-6 h-6 text-white"
