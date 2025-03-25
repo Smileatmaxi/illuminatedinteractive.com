@@ -67,13 +67,28 @@ export default function Contact() {
     //basic HTML and Tailwind
     return (
         <div className="w-full justify-center p-2 sm:p-10 items-center">
-            <div className="mx-auto grid w-full max-w-7xl px-4 py-20 md:px-8 md:py-40 text-center">
-                <h1 className="text-4xl font-semibold tracking-tight text-balance text-gray-400 sm:text-5xl pb-10">CONTACT
-                    US</h1>
-                <p className="mt-2 text-lg/8 text-gray-500">
-                    If you have any questions regarding us or our games feel free to write us an Email, You will receive
-                    an automated E-Mail notification with a Ticket number.
-                    make sure to keep it. We will get in contact with you as soon as possible!
+            <div className="mx-auto grid w-full max-w-7xl px-4 py-20 text-center">
+                <div>
+                    <h1 className="text-4xl font-semibold tracking-tight text-balance text-gray-400 sm:text-5xl pb-10">CONTACT
+                        US</h1>
+                    <p className="mt-2 text-lg/8 text-gray-500">
+                        If you have any questions regarding us or our games feel free to write us an Email, You will receive
+                        an automated E-Mail notification with a Ticket number.
+                        make sure to keep it. We will get in contact with you as soon as possible!
+                    </p>
+                </div>
+            </div>
+            <div className="flex flex-col items-center space-x-4">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     width="24" height="24"
+                     fill="red"
+                     className="bi bi-exclamation-triangle-fill flex items-center justify-center text-gray-500 mb-4"
+                     viewBox="0 0 16 16">
+                    <path
+                        d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5m.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                </svg>
+                <p className="text-l text-red-500 pb-10">
+                    When you send us a mail make sure to also check your Junk/Spam inbox!
                 </p>
             </div>
             <div>
@@ -84,8 +99,10 @@ export default function Contact() {
                         errorMessage={validationErrors.firstName}
                         value={data.firstName}
                         onChange={onChange}
+                        required={true}
                         id="fistName"
                         label="First Name*"
+                        type="text"
                         placeholder="Your First Name"
                         name="firstName">
                     </Input>
@@ -94,7 +111,9 @@ export default function Contact() {
                         errorMessage={validationErrors.lastName}
                         value={data.lastName}
                         onChange={onChange}
+                        required={true}
                         id="lastName"
+                        type="text"
                         label="Last Name*"
                         placeholder="Your Last Name"
                         name="lastName">
@@ -104,7 +123,9 @@ export default function Contact() {
                         errorMessage={validationErrors.email}
                         value={data.email}
                         onChange={onChange}
+                        required={true}
                         id="email"
+                        type="email"
                         label="E-Mail*"
                         placeholder="Your E-Mail"
                         name="email">
@@ -114,7 +135,9 @@ export default function Contact() {
                         errorMessage={validationErrors.subject}
                         value={data.subject}
                         onChange={onChange}
+                        required={true}
                         id="subject"
+                        type="text"
                         label="Subject*"
                         placeholder="What's your Message about?"
                         name="subject">
@@ -124,6 +147,7 @@ export default function Contact() {
                         errorMessage={validationErrors.message}
                         value={data.message}
                         onChange={onChange}
+                        required={true}
                         id="message"
                         name="message"
                         label="Message*"
@@ -147,19 +171,6 @@ export default function Contact() {
                         </button>
                     </div>
                 </form>
-                <div className="flex flex-col items-center space-x-4 mt-10">
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                         width="24" height="24"
-                         fill="red"
-                         className="bi bi-exclamation-triangle-fill flex items-center justify-center text-gray-500"
-                         viewBox="0 0 16 16">
-                        <path
-                            d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5m.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
-                    </svg>
-                    <p className="mt-2 text-l text-red-600">
-                        When you send us a mail make sure to also check your Junk/Spam inbox!
-                    </p>
-                </div>
             </div>
         </div>
     )
