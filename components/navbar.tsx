@@ -3,7 +3,7 @@
 import React, {useState} from 'react';
 import Link from 'next/link';
 import Image from "next/image";
-import mainLogo from "@/public/ui/IlluminatedInteractive-logo.webp"
+import mainLogo from "@/public/logos/IlluminatedInteractive-logo.webp"
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
