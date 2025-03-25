@@ -29,11 +29,6 @@ module.exports = {
             },
         },
     },
-    // eslint-disable-next-line @typescript-eslint/no-require-imports
-    plugins: [require('daisyui'), addVariablesForColors],
-    daisyui: {
-        themes: ["light", "dark"],
-    },
 } satisfies Config;
 
 // This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
