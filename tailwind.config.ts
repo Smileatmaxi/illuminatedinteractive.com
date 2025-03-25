@@ -20,6 +20,9 @@ module.exports = {
                 sectionTwo: `url('../public/RootedRain.webp')`,
                 sectionThree: `url('../public/RootedMetro.webp')`,
             },
+            mainLogoImage: {
+                mainLogo: `url('../public/ui/IlluminatedInteractive-Logo.png')`,
+            },
             colors: {
                 background: "var(--background)",
                 foreground: "var(--foreground)",

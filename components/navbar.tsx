@@ -2,6 +2,8 @@
 
 import React, {useState} from 'react';
 import Link from 'next/link';
+import Image from "next/image";
+import mainLogo from "@/public/ui/IlluminatedInteractive-logo.webp"
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -12,27 +14,28 @@ const Navbar = () => {
             <div className="flex items-center justify-between h-20 px-5">
                 {/* Logo / Brand */}
                 <div>
-                    <Link href="/" className="text-3xl text-white">
-                        ILLUMINATED-INTERACTIVE
+                    <Link href="/" className="flex flex-row items-center space-x-2">
+                        <Image src={mainLogo} alt="MainLogo" width={70} height={70} />
+                        <h2 className="text-4xl text-gray-200 font-bold">Illuminated-Interactive</h2>
                     </Link>
                 </div>
 
                 {/* Desktop Menu (hidden on small screens) */}
                 <div className="hidden md:flex space-x-8">
                     <Link
-                        href=""
+                        href="noctlanthegame"
                         className="text-white transition-colors duration-300 hover:text-gray-300 text-xl"
                     >
                         Noctlan
                     </Link>
                     <Link
-                        href=""
+                        href="news"
                         className="text-white transition-colors duration-300 hover:text-gray-300 text-xl"
                     >
                         News
                     </Link>
                     <Link
-                        href=""
+                        href="media"
                         className="text-white transition-colors duration-300 hover:text-gray-300 text-xl"
                     >
                         Media
