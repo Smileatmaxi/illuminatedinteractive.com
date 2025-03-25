@@ -1,11 +1,11 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, {useState} from 'react'
 import Input from "@/components/input";
 import Textarea from "@/components/textarea";
-import { validate } from "@/app/utilities/validate";
-import { toast } from "sonner";
-import { redirect } from "next/navigation";
+import {validate} from "@/app/utilities/validate";
+import {toast} from "sonner";
+import {redirect} from "next/navigation";
 
 //Exporting this React component
 export default function Contact() {
@@ -65,13 +65,16 @@ export default function Contact() {
     //basic HTML and Tailwind
     return (
         <div className="w-full justify-center p-2 sm:p-10 items-center">
-            <div className="mx-auto grid w-full max-w-7xl gap-4 px-4 py-20 md:px-8 md:py-40 text-center">
-                <h1 className="text-4xl font-semibold tracking-tight text-balance text-gray-400 sm:text-5xl">CONTACT
+            <div className="mx-auto grid w-full max-w-7xl px-4 py-20 md:px-8 md:py-40 text-center">
+                <h1 className="text-4xl font-semibold tracking-tight text-balance text-gray-400 sm:text-5xl pb-10">CONTACT
                     US</h1>
-                <p className="mt-2 text-lg/8 text-gray-500">If you have any questions regarding us or our games feel
-                    free to write us.</p>
+                <p className="mt-2 text-lg/8 text-gray-500">
+                    If you have any questions regarding us or our games feel free to write us an Email, You will receive
+                    an automated E-Mail notification with a Ticket number.
+                    make sure to keep it. We will get in contact with you as soon as possible!
+                </p>
             </div>
-            <div className="px-3">
+            <div>
                 <form action="#" method="POST" className="mx-auto max-w-xl flex flex-col items-center"
                       onSubmit={sendEmail}>
                     <Input
@@ -126,20 +129,34 @@ export default function Contact() {
                     </Textarea>
                     <div className="mt-2.5">
                         <button
-                            className="btn btn-accent w-full py-2 mt-2 text-lg text-black bg-accent rounded-md active:bg-success outline-none disabled:bg-opacity-50"
+                            className="relative btn btn-accent w-full py-2 mt-2 text-lg text-black bg-accent rounded-md active:bg-success outline-none disabled:bg-opacity-50"
                             type="submit"
                             disabled={loading}
                         >
                             {loading && (
                                 <span className="absolute inset-0 flex items-center justify-center">
-                                    <span className="loading loading-dots loading-xl">
-                                    </span>
+                                    <span className="loading loading-dots loading-xl"></span>
                                 </span>
                             )}
-                            <span className={loading ? "invisible" : "visible"}>Send My Message</span>
+                            <span className={loading ? "invisible" : "visible"}>
+                                Send My Message
+                            </span>
                         </button>
                     </div>
                 </form>
+                <div className="flex flex-col items-center space-x-4 mt-10">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                         width="24" height="24"
+                         fill="red"
+                         className="bi bi-exclamation-triangle-fill flex items-center justify-center text-gray-500"
+                         viewBox="0 0 16 16">
+                        <path
+                            d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5m.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                    </svg>
+                    <p className="mt-2 text-l text-red-600">
+                        When you send us a mail make sure to also check your Junk/Spam inbox!
+                    </p>
+                </div>
             </div>
         </div>
     )
