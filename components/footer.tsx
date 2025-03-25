@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Footer = () => {
     return (
-        <footer className="footer footer-center bg-neutral-900 text-base-content rounded-sm p-10">
+        <footer className="footer footer-center bg-neutral-900 text-base-content rounded-sm p-10 flex flex-col">
                 <nav className="grid grid-flow-col gap-4">
                     <Link className="link link-hover" href="frequently-asked">FAQ</Link>
                     <Link className="link link-hover" href="about-us">About Us</Link>
