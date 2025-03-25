@@ -4,6 +4,8 @@ interface InputProps{
     id: string
     name: string
     label: string
+    type: string
+    required: boolean
     placeholder: string
     value: string
     onChange: (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => void
@@ -15,8 +17,10 @@ const Input = ({
                    id,
                    name,
                    label,
+                   type,
                    placeholder,
                    value,
+                   required = Boolean(),
                    onChange,
                    error,
                    errorMessage = '',
@@ -30,15 +34,18 @@ const Input = ({
                     value={value}
                     autoComplete="off"
                     onChange={onChange}
-                    type="text"
                     id={id}
+                    type={type}
+                    minLength={3}
+                    maxLength={36}
                     name={name}
+                    required={Boolean(required)}
                     placeholder={placeholder}
                     {...props}
-                    className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1
-                    -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2"
+                    className="input validator block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-2
+                    -outline-offset-1 outline-gray-300 active:outline-2 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2"
                 />
-                {error ? <p className="text-red-600 italic text-sm mt-1">{errorMessage}</p>: null}
+                {error ? <div className="validator-hint">{errorMessage}</div>: null}
             </div>
         </div>
     )
