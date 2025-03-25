@@ -58,8 +58,8 @@ export const EmailTemplateUser: React.FC<Readonly<EmailTemplateProps>> = ({first
 );
 
 const main = {
-    backgroundColor: '#212121',
-    color: '#fff',
+    backgroundColor: '#fff',
+    color: '#212121',
 };
 
 const container = {
