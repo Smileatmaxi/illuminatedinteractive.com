@@ -28,6 +28,7 @@ export default function Contact() {
     }>({})
 
     const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(false);
 
     const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -46,6 +47,7 @@ export default function Contact() {
             setErrors(validationErrors)
             toast.error('An error occurred. Please check your inputs.')
             setLoading(false);
+            setError(true);
             return response.status === 400;
         } else {
             toast.success('Your message has been sent.')
@@ -125,17 +127,18 @@ export default function Contact() {
                         id="message"
                         name="message"
                         label="Message*"
-                        placeholder="What's on your mind?">
+                        placeholder="What's on your mind?"
+                    >
                     </Textarea>
                     <div className="mt-2.5">
                         <button
-                            className="relative btn btn-accent w-full py-2 mt-2 text-lg text-black bg-accent rounded-md active:bg-success outline-none disabled:bg-opacity-50"
+                            className="relative btn bg-sky-600 hover:bg-sky-400 w-full py-2 mt-2 text-lg text-white rounded-xl active:bg-green-700 disabled:bg-opacity-75"
                             type="submit"
-                            disabled={loading}
+                            disabled={loading || error}
                         >
                             {loading && (
                                 <span className="absolute inset-0 flex items-center justify-center">
-                                    <span className="loading loading-dots loading-xl"></span>
+                                    <span className="loading loading-dots loading-xl bg-sky-900"></span>
                                 </span>
                             )}
                             <span className={loading ? "invisible" : "visible"}>
