@@ -10,17 +10,13 @@ const Navbar = () => {
 
     return (
         <nav className="fixed top-0 left-0 w-full z-50 flex flex-col bg-black/50 backdrop-blur-md shadow-lg">
-            {/* Top Bar */}
             <div className="flex items-center justify-between h-20 px-5">
-                {/* Logo / Brand */}
                 <div>
                     <Link href="/" className="flex flex-row items-center space-x-2">
-                        <Image src={mainLogo} alt="MainLogo" width={70} height={70} />
+                        <Image src={mainLogo} alt="MainLogo" width={70} height={70}/>
                         <h1 className="text-4xl text-gray-200 font-bold">IlluminatedInteractive</h1>
                     </Link>
                 </div>
-
-                {/* Desktop Menu (hidden on small screens) */}
                 <div className="hidden md:flex space-x-8">
                     <Link
                         href="noctlanthegame"
@@ -47,8 +43,6 @@ const Navbar = () => {
                         About Us
                     </Link>
                 </div>
-
-                {/* Hamburger Icon (shown on small screens) */}
                 <button
                     onClick={() => setIsOpen(!isOpen)}
                     type="button"
@@ -70,8 +64,6 @@ const Navbar = () => {
                     </svg>
                 </button>
             </div>
-
-            {/* Mobile Menu (conditional render) */}
             {isOpen && (
                 <div className="md:hidden backdrop-blur-md shadow-lg text-white">
                     <ul className="flex flex-col items-center py-4 space-y-2">
