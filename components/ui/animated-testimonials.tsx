@@ -23,7 +23,7 @@ export const AnimatedTestimonials = ({testimonials, autoplay = false,}: {
     const [rotation, setRotation] = useState(0);
 
     useEffect(() => {
-        setRotation(randomRotateY()); // Only run on the client
+        setRotation(randomRotateY());
     }, []);
 
     const handleNext = useCallback(() => {
