@@ -1,7 +1,7 @@
 "use client";
 
 import {IconArrowLeft, IconArrowRight} from "@tabler/icons-react";
-import {motion, AnimatePresence} from "motion/react";
+import {motion, AnimatePresence} from "framer-motion";
 import Image from "next/image";
 import {useEffect, useState, useCallback} from "react";
 
@@ -22,6 +22,12 @@ export const AnimatedTestimonials = ({
     autoplay?: boolean;
 }) => {
     const [active, setActive] = useState(0);
+
+    const [rotation, setRotation] = useState(0);
+
+    useEffect(() => {
+        setRotation(randomRotateY()); // Only run on the client
+    }, []);
 
     const handleNext = useCallback(() => {
         setActive((prev) => (prev + 1) % testimonials.length);
@@ -55,15 +61,14 @@ export const AnimatedTestimonials = ({
                                 <motion.div
                                     key={testimonial.src}
                                     initial={{
-                                        opacity: 0,
                                         scale: 0.9,
-                                        rotate: randomRotateY(),
-                                        z: -100,
+                                        rotate: rotation,
+                                        z: -50,
                                     }}
                                     animate={{
                                         opacity: isActive(index) ? 1 : 0.7,
                                         scale: isActive(index) ? 1 : 0.95,
-                                        rotate: isActive(index) ? 0 : randomRotateY(),
+                                        rotate: isActive(index) ? 0 : rotation,
                                         z: isActive(index) ? 0 : -100,
                                         zIndex: isActive(index)
                                             ? 999
@@ -73,8 +78,8 @@ export const AnimatedTestimonials = ({
                                     exit={{
                                         opacity: 0,
                                         scale: 0.9,
-                                        z: 100,
-                                        rotate: randomRotateY(),
+                                        z: 50,
+                                        rotate: rotation,
                                     }}
                                     transition={{
                                         duration: 0.4,
