@@ -14,10 +14,7 @@ type Testimonial = {
     linkedin: string;
     github: string;
 };
-export const AnimatedTestimonials = ({
-                                         testimonials,
-                                         autoplay = false,
-                                     }: {
+export const AnimatedTestimonials = ({testimonials, autoplay = false,}: {
     testimonials: Testimonial[];
     autoplay?: boolean;
 }) => {
